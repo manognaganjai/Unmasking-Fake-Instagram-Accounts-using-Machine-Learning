@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Instagram Scam Account Detector</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+      color: white;
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    form {
+      background: white;
+      color: #333;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    label {
+      display: block;
+      margin-top: 12px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: linear-gradient(to right, #feda75, #d62976);
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 22px;
+      text-align: center;
+      font-weight: bold;
+      background-color: white;
+      color: #d62976;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .note {
+      margin-top: 10px;
+      font-size: 14px;
+      text-align: center;
+      color: #fff;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <h1>Instagram Scam Account Detector</h1>
+
+  <form method="POST">
+    <label>Username Length:</label>
+    <input type="number" name="username_length" required>
+
+    <label>Username Has Number? (0 = No, 1 = Yes):</label>
+    <input type="number" name="username_has_number" min="0" max="1" required>
+
+    <label>Full Name Has Number? (0 = No, 1 = Yes):</label>
+    <input type="number" name="full_name_has_number" min="0" max="1" required>
+
+    <label>Full Name Length:</label>
+    <input type="number" name="full_name_length" required>
+
+    <label>Is Private? (0 = No, 1 = Yes):</label>
+    <input type="number" name="is_private" min="0" max="1" required>
+
+    <label>Is Joined Recently? (0 = No, 1 = Yes):</label>
+    <input type="number" name="is_joined_recently" min="0" max="1" required>
+
+    <label>Has Channel? (0 = No, 1 = Yes):</label>
+    <input type="number" name="has_channel" min="0" max="1" required>
+
+    <label>Is Business Account? (0 = No, 1 = Yes):</label>
+    <input type="number" name="is_business_account" min="0" max="1" required>
+
+    <label>Has Guides? (0 = No, 1 = Yes):</label>
+    <input type="number" name="has_guides" min="0" max="1" required>
+
+    <label>Has External URL? (0 = No, 1 = Yes):</label>
+    <input type="number" name="has_external_url" min="0" max="1" required>
+
+    <label>Number of Followers:</label>
+    <input type="number" name="edge_followed_by" required>
+
+    <label>Number of Followings:</label>
+    <input type="number" name="edge_follow" required>
+
+    <button type="submit">Check Account</button>
+  </form>
+
+  <div class="note">*Note: For all Yes/No fields, enter 1 for Yes and 0 for No</div>
+
+  
+</body>
+</html>
